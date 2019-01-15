@@ -1,6 +1,6 @@
 'use strict';
 
-var hours =['6','7','8','9','10','11','12','1','2','3','4','5','6','7','8']
+var hours =['6 am','7am','8pm','9pm','10pm','11','12','1','2','3','4','5','6','7','8']
 
 var oneStaAndPikeUl= document.getElementById('pike');
 var seaTacAirportUl= document.getElementById('airport');

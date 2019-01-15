@@ -1,6 +1,6 @@
 'use strict';
 
-var hours =['6 am','7am','8pm','9pm','10pm','11','12','1','2','3','4','5','6','7','8']
+var hours =['6 am','7am','8am','9am','10am','11 am','12pm','1pm','2pm','3 pm','4pm','5pm','6pm','7pm','8pm']
 
 var oneStaAndPikeUl= document.getElementById('pike');
 var seaTacAirportUl= document.getElementById('airport');
@@ -12,84 +12,84 @@ var market ={
     name: '1st and Pike',
     minSales:23,
     maxSales:65,
-    time: hours,
-   render: function(minSales,maxSales) {
+    render: function() {
         for (var i = 0; i < hours.length; i++) {
             var num= Math.floor((Math.random()*(this.maxSales-this.minSales))+this.minSales);
             var liEl = document.createElement('li');
-            liEl.textContent = `${num} of customer`;
+            liEl.textContent = `${hours[i]}:${num} of customer`;
             console.log('Just created liEl', liEl)
-            oneStaAndPikeUl.append(liEl);
+            oneStaAndPikeUl.appendChild(liEl);
         }
-    }
-    
+    }   
 }
 
-var airplanes ={
-    name: 'SeaTac Airport',
-    minSales:3,
-    maxSales:24,
-    time:hours,
-    render: function(minSales,maxSales) {
-        for (var i = 0; i < hours.length; i++) {
-            var num= Math.floor((Math.random()*(this.maxSales-this.minSales))+this.minSales);
-            var liEl = document.createElement('li');
-            liEl.textContent = `${num} of customer`;
-            console.log('Just created liEl', liEl)
-            seaTacAirportUl.append(liEl);
-            }
-        }
-    }
+render.market()
 
-var spaceNettle ={
-    name: 'Seattle Center',
-    minSales:11,
-    maxSales:38,
-    time:hours,
-    render: function(minSales,maxSales) {
-        for (var i = 0; i < hours.length; i++) {
-            var num= Math.floor((Math.random()*(this.maxSales-this.minSales))+this.minSales);
-            var liEl = document.createElement('li');
-            liEl.textContent = `${num} of customer`;
-            console.log('Just created liEl', liEl)
-            seattleCenterUl.append(liEl);
-            }
-        }
-    }
+// var airplanes ={
+//     name: 'SeaTac Airport',
+//     minSales:3,
+//     maxSales:24,
+//     render: function() {
+//         for (var i = 0; i < hours.length; i++) {
+//             var num= Math.floor((Math.random()*(this.maxSales-this.minSales))+this.minSales);
+//             var liEl = document.createElement('li');
+//             liEl.textContent = `${hours[i]};${num} of customer`;
+//             console.log('Just created liEl', liEl)
+//             seaTacAirportUl.appendChild(liEl);
+//             }
+//         }
+//     }
 
+// // render.airplanes()
 
-
-var capitolhill={
-    name:'Capitol Hill',
-    minSales: 20,
-    maxSales:38,
-    time: hours,
-    render: function(minSales,maxSales) {
-        for (var i = 0; i < hours.length; i++) {
-            var num= Math.floor((Math.random()*(this.maxSales-this.minSales))+this.minSales);
-            var liEl = document.createElement('li');
-            liEl.textContent = `${num} of customer`;
-            console.log('Just created liEl', liEl)
-            capitolHillUl.append(liEl);
-            }
-        }
-    }
+// var spaceNettle ={
+//     name: 'Seattle Center',
+//     minSales:11,
+//     maxSales:38,
+//     render: function() {
+//         for (var i = 0; i < hours.length; i++) {
+//             var num= Math.floor((Math.random()*(this.maxSales-this.minSales))+this.minSales);
+//             var liEl = document.createElement('li');
+//             liEl.textContent = `${hours[i]};${num} of customer`;
+//             console.log('Just created liEl', liEl)
+//             seattleCenterUl.appendChild(liEl);
+//             }
+//         }
+//     }
 
 
 
-var alki={
-    name:'Alki Beach',
-    minSales:2,
-    maxSales:16,
-    time: hours, render: function(minSales,maxSales) {
-        for (var i = 0; i < hours.length; i++) {
-            var num= Math.floor((Math.random()*(this.maxSales-this.minSales))+this.minSales);
-            var liEl = document.createElement('li');
-            liEl.textContent = `${num} of customer`;
-            console.log('Just created liEl', liEl)
-            alkiBeachUl.append(liEl);
-            }
-        }
-    }
+// var capitolhill={
+//     name:'Capitol Hill',
+//     minSales: 20,
+//     maxSales:38,
+//     time: hours,
+//     render: function() {
+//         for (var i = 0; i < hours.length; i++) {
+//             var num= Math.floor((Math.random()*(this.maxSales-this.minSales))+this.minSales);
+//             var liEl = document.createElement('li');
+//             liEl.textContent = `${hours[i]}:${num} of customer`;
+//             console.log('Just created liEl', liEl)
+//             capitolHillUl.appendChild(liEl);
+//             }
+//         }
+//     }
+
+
+
+// var alki={
+//     name:'Alki Beach',
+//     minSales:2,
+//     maxSales:16,
+//     time: hours, render: function() {
+//         for (var i = 0; i < hours.length; i++) {
+//             var num= Math.floor((Math.random()*(this.maxSales-this.minSales))+this.minSales);
+//             var liEl = document.createElement('li');
+//             liEl.textContent = `${hours[i]}${num} of customer`;
+//             console.log('Just created liEl', liEl)
+//             alkiBeachUl.appendChild(liEl);
+//             }
+//         }
+//     }
 
 

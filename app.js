@@ -4,12 +4,13 @@ var allPlaces =[];
 
 var cookiesStandTable= document.getElementById('cookiesStand'); 
 
-function Places(name,minSales,maxSales,){
+function Places(name,minSales,maxSales, ranNum){
     this.name = name;
     this.minSales= minSales;
     this.maxSales= maxSales;
     this.salesArrary= this.sales();
     allPlaces.push(this);
+    this.salesPerhr= ranNum;
     }
 
 Places.prototype.sales=function() {
@@ -44,25 +45,49 @@ Places.prototype.render= function(){
     tdEl= document.createElement('td');
     tdEl.textContent=(totalLocation);
     trEl.appendChild(tdEl);
-    // tdEl= document.createElement('td');
-    // tdEl.textContent= this.minSales;
-    // trEl.appendChild(tdEl);
-    // tdEl=document.createElement('td');
-    // tdEl.textContent = this.maxSales;
-    // trEl.appendChild(tdEl);
+
     cookiesStand.appendChild(trEl);
 
 }
 
 function makeHeaderRow(){
     var trEl = document.createElement('tr');
+    var thEl =document.createElement('th');
+        thEl.textContent=('');
+        trEl.appendChild(thEl);
+
     for (var i=0; i< hours.length;i++){
-        var thEl = document.createElement('tr');
+        var thEl = document.createElement('th');
+       //console.log(hours[i]);
         thEl.textContent= hours[i];
+        trEl.appendChild(thEl);
     }
+    thEl =document.createElement('th');
+    thEl.textContent='Total 1';//per location
+    trEl.appendChild(thEl);
+
     cookiesStand.appendChild(trEl);
 }
 
+function makeFooterRow(){
+    var trEl = document.createElement('tr');
+    var thEl =document.createElement('th');
+        thEl.textContent= 'total 2';//per hour
+        trEl.appendChild(thEl);
+        
+    for(var i=0; i<this.salesArrary.length;i++){
+        var hourCount=0;
+        var totelTwo= hourCount+salesPerhr[i];
+        thEl.textContent= totelTwo[i];
+        trEl.appendChild(thEl);
+    }
+    thEl =document.createElement('th');
+    thEl.textContent='';//per location
+    trEl.appendChild(thEl);
+
+    cookiesStand.appendChild(trEl);
+    cookiesStand.appendChild(trEl);
+}
 
 function renderAllPlaces() {
     for(var i = 0; i < allPlaces.length; i++) {

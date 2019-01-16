@@ -7,3 +7,5 @@ header{
     float: initial;
     margin-right:100px;
 }
+table,td,tr{border: 2px solid black;
+}

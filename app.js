@@ -135,15 +135,20 @@ function addNewStore(event){
    
     new Places(location,minCust,maxCust,avgCookSale);
     
-    
-    
+    cookiesStandTable.innerHTML='';
+    refreacher();
 
     console.log('new place')
 }
 newPlaces.addEventListener('submit',addNewStore);
 
-makeHeaderRow();
 
-renderAllPlaces();
+function refreacher(){
+    makeHeaderRow();
 
-makeFooterRow();
+    renderAllPlaces();
+
+    makeFooterRow();
+}
+
+refreacher();

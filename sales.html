@@ -10,23 +10,26 @@
         <img id="fishy" src="pic/salmon.png" alt="piss off fish">
     </header>
     <body>
-        <fieldset>
-            <legend> Add New Location</legend>
+        <form id='to-add-new-location'>
+            <fieldset>
+                <legend> Add New Location</legend>
+                
+                <label for = "location"> Location:</label>
+                <input name ="location" type="text">
+                
+                <label for = "maxCus"> Max Customer:</label>
+                <input name ="maxCus" type="text">
             
-            <label for = "location"> Location:</label>
-            <input name ="location" type="text">
-            
-            <label for = "maxCus"> Max Customer:</label>
-            <input name ="maxCus" type="text">
-           
-            <label for = "minCus"> MinCustomer:</label>
-            <input name ="minCun" type="text">
+                <label for = "minCus"> MinCustomer:</label>
+                <input name ="minCus" type="text">
 
-            <label for = "avgCookiesSales"> Avaerge Sales of Cookies:</label>
-            <input name ="avgCookiesSales" type="text">
+                <label for = "avgCookiesSales"> Avaerge Sales of Cookies:</label>
+                <input name ="avgCookiesSales" type="text">
 
-            <button type ="submit">Submit</button>
-        </fieldset>
+                <button type ="submit">Submit</button>
+            </fieldset>
+        </form>
+        
       <table id="cookiesStand"></table>
         <script src="app.js"></script>
     </body>

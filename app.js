@@ -1,4 +1,6 @@
 'use strict';
+var newPlaces= document.getElementById('to-add-new-location')
+var allNewPlaces=[];
 var hours =['6 am','7am','8am','9am','10am','11 am','12pm','1pm','2pm','3 pm','4pm','5pm','6pm','7pm','8pm'];
 var allPlaces =[];//example for a globle varable
 var totalPerHour=[]
@@ -48,7 +50,9 @@ Places.prototype.render= function(){
     var tdEl= document.createElement('td');
     tdEl.textContent =this.name;
     trEl.appendChild(tdEl);
+    
     var totalLocation = 0
+
     for(var i=0; i<this.salesArrary.length; i++){
         tdEl= document.createElement('td');
         tdEl.textContent=(this.avgCookiesArrary[i]);
@@ -107,14 +111,44 @@ function makeFooterRow(){
     cookiesStand.appendChild(trEl);
 }
 
+
+
 function renderAllPlaces() {
     for(var i = 0; i < allPlaces.length; i++) {
       allPlaces[i].render();
     }
 }
 
-makeHeaderRow();
 
-renderAllPlaces();
+function addNewStore(event){
+    event.preventDefault();
+    console.log("location", event.target.location.value);
+    console.log("minCust", event.target.minCus.value);
+    console.log("maxCust", event.target.maxCus.value);
+    console.log("avgCookSale",event.target.avgCookiesSales.value);
 
-makeFooterRow();
+
+    var location= event.target.location.value;
+    var minCust= event.target.minCus.value;
+    var maxCust= event.target.maxCus.value;
+    var avgCookSale= event.target.avgCookiesSales.value;
+   
+    new Places(location,minCust,maxCust,avgCookSale);
+    
+    cookiesStandTable.innerHTML='';
+    refreacher();
+
+    console.log('new place')
+}
+newPlaces.addEventListener('submit',addNewStore);
+
+
+function refreacher(){
+    makeHeaderRow();
+
+    renderAllPlaces();
+
+    makeFooterRow();
+}
+
+refreacher();

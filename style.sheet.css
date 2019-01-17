@@ -1,12 +1,38 @@
 header{
     color: aliceblue;
     background-color: salmon; 
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
     
 }
 #fishy{
     float: initial;
-    margin-right:100px;
+    text-align: center;
+    border: 2px dotted seashell;
 }
-table,td,tr{border: 2px solid black;
+fieldset{
+    border: 6px ridge rgb(96, 96, 248);
+    padding: 20px;
+    margin: 20px;
+}  
+label{
+    border: 2px dashed blue;
+    margin: 5px;
+}
+table,td,tr{
+    margin: center;
+    background-color: white;
+    border: 2px solid black;
     padding: 5px;
+    
 }
+#cookiesStand{
+    border: 2px dashed green;
+}
+body{
+    background-color: aquamarine;
+}
+
+
+

@@ -94,12 +94,13 @@ function makeFooterRow(){
     for(var i=0; i<hours.length;i++){
        // tdEl=document.createElement('td');
         var hrTotal = 0; 
-
+    
         for(var j=0; j<allPlaces.length;j++){
            // console.log(hrTotal,"hour of total")
            hrTotal += allPlaces[j].avgCookiesArrary[i]; 
         }//console.log('avg cookies', hrTotal);
-
+        
+        
         var thEl= document.createElement('th');
         thEl.textContent=(hrTotal);
         trEl.appendChild(thEl);

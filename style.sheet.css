@@ -1,12 +1,73 @@
 header{
     color: aliceblue;
-    background-color: salmon; 
-    
+    background-color: salmon;
+    background-image: 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    text-align: center; 
 }
+
+li{
+    display: inline;
+    font-size:20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
 #fishy{
-    float: initial;
-    margin-right:100px;
+    display: inline;
+    width: 200px;
+    height:70px;
 }
-table,td,tr{border: 2px solid black;
+
+#chinook{
+    margin: 50px;
+    width: 960px;
+    height: 450px;
+}
+
+.buy{
+    width: 300px;
+    height: 375px;
+
+}
+
+#family{
+    width:480px;
+    height:400px;
+}
+
+#fish{width: 480px;
+    height:400px;    
+}
+
+main{
+    font-size: 20px;
+
+}
+
+footer{ 
+    font-size: 15px;
+}
+
+fieldset{
+    border: 6px ridge rgb(96, 96, 248);
+    padding: 20px;
+    margin: 20px;
+}  
+label{
+    border: 2px dashed blue;
+    margin: 5px;
+}
+table,td,tr{
+    margin: center;
+    background-color: white;
+    border: 2px solid black;
     padding: 5px;
 }
+body{
+    background-color: aquamarine;
+}
+
+
+

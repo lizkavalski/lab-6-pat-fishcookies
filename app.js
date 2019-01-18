@@ -91,23 +91,28 @@ function makeFooterRow(){
         thEl.textContent=('Total Cookies sold per hour');//per hour
         trEl.appendChild(thEl);
        
+    var totalTotal= 0 
     for(var i=0; i<hours.length;i++){
        // tdEl=document.createElement('td');
-        var hrTotal = 0; 
-    
+       var hrTotal = 0; 
+
         for(var j=0; j<allPlaces.length;j++){
            // console.log(hrTotal,"hour of total")
            hrTotal += allPlaces[j].avgCookiesArrary[i]; 
         }//console.log('avg cookies', hrTotal);
         
         
+        totalTotal += hrTotal
+
         var thEl= document.createElement('th');
         thEl.textContent=(hrTotal);
         trEl.appendChild(thEl);
     }
 
+
+
     thEl =document.createElement('th');
-    thEl.textContent=('');//per location
+    thEl.textContent=(totalTotal);//per location
     trEl.appendChild(thEl);
     cookiesStand.appendChild(trEl);
 }

@@ -1,16 +1,55 @@
 header{
     color: aliceblue;
-    background-color: salmon; 
-    text-align: center;
+    background-color: salmon;
+    background-image: 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 50px;
-    
+    text-align: center; 
 }
-#fishy{
-    float: initial;
+
+li{
+    display: inline;
+    font-size:20px;
+    margin-right: 20px;
     text-align: center;
-    border: 2px dotted seashell;
 }
+
+#fishy{
+    display: inline;
+    width: 200px;
+    height:70px;
+}
+
+#chinook{
+    margin: 50px;
+    width: 960px;
+    height: 450px;
+}
+
+.buy{
+    width: 300px;
+    height: 375px;
+
+}
+
+#family{
+    width:480px;
+    height:400px;
+}
+
+#fish{width: 480px;
+    height:400px;    
+}
+
+main{
+    font-size: 20px;
+
+}
+
+footer{ 
+    font-size: 15px;
+}
+
 fieldset{
     border: 6px ridge rgb(96, 96, 248);
     padding: 20px;
@@ -25,10 +64,6 @@ table,td,tr{
     background-color: white;
     border: 2px solid black;
     padding: 5px;
-    
-}
-#cookiesStand{
-    border: 2px dashed green;
 }
 body{
     background-color: aquamarine;

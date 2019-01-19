@@ -1,72 +1,204 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: aquamarine; 
+    scroll-behavior: auto;
+}
+/* header */
 header{
+    width: 940px;
+    height: 150px;
+    margin: auto;
     color: aliceblue;
     background-color: salmon;
-    background-image: 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url("pic/salmon.png");
+    background-repeat: no-repeat;
+    background-position:center top;  
     font-size: 50px;
     text-align: center; 
 }
-
-li{
-    display: inline;
+/* nav */
+nav ul li{
+    display: inline-block;
     font-size:20px;
-    margin-right: 20px;
+    margin: 0px auto;
+    text-align: center;
+    padding-right:10px; 
+}
+a{
+    text-decoration: none;
+    color:aliceblue;
+}
+/* main pic */
+main{
+    margin: auto;
+}
+main img{
+    width: 940px;
+    display: block;
+    margin:auto;
+    margin-top: 30px;
     text-align: center;
 }
-
-#fishy{
-    display: inline;
-    width: 200px;
-    height:70px;
+/* merchindies */
+#buystuff{
+    width:940px;
+    display: block;
+    margin:auto;
+    margin-left: 200px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+main ul li img{
+    border: 2px solid brown;
+    width: 250px;
+    height: 275px;
+    float: left;
+    margin-right: 30px;
+    display: block;   
+}
+main li:first-child{
+    margin-left: 200px;
+}
+main li:last-child{
+    margin-right: -40px;
 }
 
-#chinook{
-    margin: 50px;
-    width: 960px;
-    height: 450px;
+button{
+    border: none;
+    padding:10px 30px;
+    background-color:rgb(8, 61, 139);
+    color:#fff;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 350ms;
+    cursor: pointer;
+    float: right;
+    margin-top: -155px;
+    margin-right: 150px;
 }
-
-.buy{
-    width: 300px;
-    height: 375px;
-
-}
-
+/* about */
 #family{
-    width:480px;
-    height:400px;
+    width:470px;
+    height: 400px;
+    display: block;
+    float: left;
+    margin-left:200px;
+    margin-right:30px;
+    margin-bottom: 30; 
+}
+ main content h2 {
+    width: calc(35% - 25px);
+    display: block;
+    float: left;
+    font-size: 25px;
+    margin-top: 35px;
+    margin-bottom: 0px; 
+    
 }
 
-#fish{width: 480px;
-    height:400px;    
+#about{
+    width: calc(35% - 25px);
+    height: 350px;
+    float: left;
+    margin-top: 10px;
+    line-height: 20px;
+    overflow:auto;
+ 
+}
+/* events part */
+#events{
+    width: 460px;
+    height: 25px;
+    float: left;
+    font-size: 30px;
+    margin-top:30px; 
+    margin-bottom:0px; 
+    margin-left:200px; 
 }
 
-main{
-    font-size: 20px;
-
+div img{
+    width: 470px;
+    height: 400px; 
+    float: right;
+    margin-right:200px;
+  
 }
 
-footer{ 
-    font-size: 15px;
+#info-events{
+    width: 460px;
+    height: 25px;
+    float: left;
+    font-size: 20px; 
+    margin-top: 0px;
+    margin-bottom: 5px;  
+    margin-left: 200px;
 }
-
+div ul li{
+    width: calc(35% - 25px);
+    height: 15px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 200px; 
+    line-height: 20px;
+}
+/* sales page */
 fieldset{
     border: 6px ridge rgb(96, 96, 248);
+    width: 890px;
+    height: 100px;
     padding: 20px;
-    margin: 20px;
+    margin-left: 213px;
 }  
+
 label{
-    border: 2px dashed blue;
-    margin: 5px;
+    display: inline-block;
+    padding:10px;
+    
 }
+
 table,td,tr{
     margin: center;
     background-color: white;
     border: 2px solid black;
     padding: 5px;
+    margin: auto;
+    margin-top: 30px;
 }
-body{
-    background-color: aquamarine;
+
+#submit{
+    border: none;
+    padding:10px 30px;
+    background-color:rgb(8, 61, 139);
+    color:#fff;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: 350ms;
+    cursor: pointer;
+    position: fixed;
+    margin: auto;
+    margin-left: 10px;
+
+}
+/* footer */
+footer{ 
+    width: 940px;
+    height: 150px;
+    display: block-inline;
+    margin-left:200px;
+    position: absolute;
+    bottom: -1350px;
+    background-color: salmon;
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center; 
+    padding-top:15px; 
+}
+
+footer ul li{
+    display: block-inline;
+    list-style-type: circle;
 }
 
 
